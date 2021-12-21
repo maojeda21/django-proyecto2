@@ -20,5 +20,7 @@ from . import views
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('', views.holaMundo, name='hola'),
-    path('vader/', views.vader, name='vader'),
+    #path('vader/', views.vader, name='vader'),
+    path('<str:nombre>/', views.saludo, name='saludo'), #Ruta que recibe un parametro.
+    #path('hola/', views.holaRender, name='holaRender')
 ]
