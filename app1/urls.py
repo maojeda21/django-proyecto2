@@ -23,4 +23,5 @@ urlpatterns = [
     #path('vader/', views.vader, name='vader'),
     path('<str:nombre>/', views.saludo, name='saludo'), #Ruta que recibe un parametro.
     #path('hola/', views.holaRender, name='holaRender')
+    path('moneda/<int:numero>', views.moneda, name='moneda'),
 ]

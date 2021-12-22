@@ -21,3 +21,8 @@ def saludo(request,nombre):
     # Un contexto envia/pasa una variables a nuestro HTML mediante Diccionarios {'llave':valor}
     context = {'name':nombre}
     return render(request, 'app1/saludo.html', context) # Aparte de enviar la request del usuario e indicarle el archivo HTML debemos pasar el context.
+
+def moneda(request,numero):
+    #numero = 0
+    context = {'numero':numero}
+    return render(request, 'app1/moneda.html',context)
