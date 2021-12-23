@@ -1,11 +1,13 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo list</title>
-</head>
-<body>
+{% extends 'todo/layout.html' %}
+{% block body %}
+
     <h1>Agreagar tareas</h1>
-</body>
-</html>
+    <form method="post">
+        {% csrf_token %} 
+        {{ formulario }}
+        <button>Enviar </button>
+    </form>
+
+    <a href="{% url 'home' %}">Home </a>
+
+{% endblock %}
